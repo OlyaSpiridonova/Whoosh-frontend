@@ -1,0 +1,8 @@
+.Navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: var(--navbar-height);
+    background-color: var(--light-purple);
+    padding: 0 32px;
+}

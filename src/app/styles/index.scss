@@ -1,0 +1,12 @@
+@use 'reset';
+@use 'variables/global';
+
+body {
+    font-family: 'Intro', sans-serif;
+}
+
+.app,
+.app_modal,
+.app_drawer {
+    font: var(--font-h1);
+}
