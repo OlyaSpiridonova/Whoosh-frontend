@@ -8,9 +8,14 @@ import {
 import { Mods, classNames } from '@/shared/lib/classNames/classNames';
 import cls from './Button.module.scss';
 
-export type ButtonTheme = 'clear' | 'outline' | 'filled' | 'circle';
-export type ButtonColor = 'normal' | 'error' | 'success';
-export type ButtonSize = 'size_m' | 'size_l' | 'size_xl';
+export type ButtonTheme =
+    | 'clear'
+    | 'outline'
+    | 'filled'
+    | 'circle'
+    | 'filledBlue';
+export type ButtonColor = 'normal' | 'error' | 'success' | 'blue';
+export type ButtonSize = 'size_m' | 'size_l' | 'size_xl' | 'size_h5';
 
 interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
     className?: string;
@@ -23,6 +28,7 @@ interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
     color?: ButtonColor;
     addonLeft?: ReactElement;
     addonRight?: ReactElement;
+    active?: boolean;
 }
 
 export const Button = forwardRef(
@@ -38,6 +44,7 @@ export const Button = forwardRef(
             addonLeft,
             addonRight,
             color = 'normal',
+            active = false,
             ...otherProps
         } = props;
 
@@ -46,6 +53,7 @@ export const Button = forwardRef(
             [cls.disabled]: disabled,
             [cls.fullWidth]: fullWidth,
             [cls.withAddon]: Boolean(addonLeft) || Boolean(addonRight),
+            [cls.active]: Boolean(active),
         };
 
         return (
@@ -56,6 +64,8 @@ export const Button = forwardRef(
                     cls[theme],
                     cls[size],
                     cls[color],
+                    active ? cls.active : '',
+                    ,
                 ])}
                 disabled={disabled}
                 {...otherProps}

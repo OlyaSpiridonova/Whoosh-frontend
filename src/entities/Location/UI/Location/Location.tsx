@@ -1,20 +1,21 @@
 import { memo, useEffect, useState } from 'react';
 import { useSelector } from 'react-redux';
+import { useAppDispatch } from '@/shared/lib/hooks/useAppDispatch/useAppDispatch';
+import {
+    DynamicModuleLoader,
+    ReducersList,
+} from '@/shared/lib/components/DynamicModuleLoader';
+import { Icon } from '@/shared/UI/Icon';
+import { PinComponent } from '@/shared/assets';
+import { classNames } from '@/shared/lib/classNames/classNames';
 import {
     getLocationData,
     getLocationError,
     getLocationIsLoading,
 } from '../../model/selectors/location';
-import { useAppDispatch } from '@/shared/lib/hooks/useAppDispatch/useAppDispatch';
 import { fetchLocation } from '../../model/services/fetchLocations/fetchLocations';
-import {
-    DynamicModuleLoader,
-    ReducersList,
-} from '@/shared/lib/components/DynamicModuleLoader';
 import { locationReducer } from '../../model/slice/locationSlice';
-import { Icon } from '@/shared/UI/Icon';
-import { PinComponent } from '@/shared/assets/icons/PinComponent';
-import { classNames } from '@/shared/lib/classNames/classNames';
+
 import cls from './Location.module.scss';
 
 const reducers: ReducersList = {
@@ -23,9 +24,6 @@ const reducers: ReducersList = {
 
 export const LocationComponent = memo(() => {
     const dispatch = useAppDispatch();
-    const isLoading = useSelector(getLocationIsLoading);
-    const locations = useSelector(getLocationData);
-    const error = useSelector(getLocationError);
 
     const [location, setLocation] = useState('');
 

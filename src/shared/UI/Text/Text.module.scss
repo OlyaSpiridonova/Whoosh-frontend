@@ -3,26 +3,43 @@
 }
 
 .text {
-    color: var(--text);
+    color: var(--grey-dark);
+}
+
+.primary {
+    .title {
+        color: var(--dark);
+    }
+    .text {
+        color: var(--dark);
+    }
 }
 
 .error {
     .title {
         color: var(--red-light);
     }
-
     .text {
         color: var(--red-dark);
     }
 }
 
+.normal {
+    .title {
+        color: var(--grey-dark);
+    }
+    .text {
+        color: var(--grey-dark);
+    }
+}
+
 .accent {
     .title {
-        color: var(--accent);
+        color: var(---grey-dark);
     }
-
     .text {
-        color: var(--accent);
+        font: var(--font-txt);
+        color: var(--grey-dark);
     }
 }
 
@@ -33,6 +50,13 @@
 
     .text {
         color: var(--inverted-secondary-color);
+    }
+}
+
+.placeholder {
+    .text {
+        color: var(--placeholder);
+        text-transform: uppercase;
     }
 }
 
@@ -48,34 +72,55 @@
     text-align: center;
 }
 
+.size_xs {
+    .title {
+        font: var(--font-txt3);
+    }
+    .text {
+        font: var(--font-txt3);
+    }
+}
+
 .size_s {
     .title {
-        font: var(--font-m);
+        font: var(--font-txt2);
     }
-
     .text {
-        font: var(--font-s);
+        font: var(--font-txt2);
+    }
+}
+
+.size_h4 {
+    .title {
+        font: var(--font-h4);
+    }
+    .text {
+        font: var(--font-h4);
     }
 }
 
 .size_m {
     .title {
-        font: var(--font-l);
+        font: var(--font-txt);
     }
 
     .text {
-        font: var(--font-m);
+        font: var(--font-txt);
     }
 }
 
 .size_l {
     .title {
-        font: var(--font-xl);
+        font: var(--font-h1);
     }
 
     .text {
-        font: var(--font-l);
+        font: var(--font-h1);
     }
+}
+
+.size_ph {
+    font: var(--font-placeholder);
 }
 
 .bold {

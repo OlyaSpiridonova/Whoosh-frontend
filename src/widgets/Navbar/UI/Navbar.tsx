@@ -1,16 +1,12 @@
-import { memo, useCallback, useState } from 'react';
-import { useSelector } from 'react-redux';
-import { classNames } from '@/shared/lib/classNames/classNames';
-import cls from './Navbar.module.scss';
-import { Icon } from '@/shared/UI/Icon';
-import { LogoComponent } from '@/shared/assets/icons/LogoComponent';
-import { PinComponent } from '@/shared/assets/icons/PinComponent';
+import { memo } from 'react';
 import { LocationComponent } from '@/entities/Location';
 import { Input } from '@/shared/UI/Input';
-import { SearchComponent } from '@/shared/assets/icons/Search';
 import { Button } from '@/shared/UI/Button';
-import { LockComponent } from '@/shared/assets/icons/Lock';
 import { HStack } from '@/shared/UI/Stack';
+import { Icon } from '@/shared/UI/Icon';
+import { classNames } from '@/shared/lib/classNames/classNames';
+import { LogoComponent, SearchComponent, LockComponent } from '@/shared/assets';
+import cls from './Navbar.module.scss';
 
 interface NavbarProps {
     className?: string;
@@ -19,7 +15,7 @@ interface NavbarProps {
 export const Navbar = memo(({ className }: NavbarProps) => {
     return (
         <header className={classNames(cls.Navbar, {}, [className])}>
-            <HStack gap="48">
+            <HStack gap="66">
                 <Icon Svg={LogoComponent} />
                 <LocationComponent />
             </HStack>
@@ -27,7 +23,7 @@ export const Navbar = memo(({ className }: NavbarProps) => {
                 placeholder="Track a Package"
                 addonRight={<Icon Svg={SearchComponent} />}
             />
-            <HStack gap="32">
+            <HStack gap="36">
                 <Button theme="clear">Send a Parcel</Button>
                 <Button theme="clear">Become a Courier</Button>
                 <Button theme="circle">

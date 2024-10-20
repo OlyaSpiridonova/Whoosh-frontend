@@ -8,15 +8,16 @@ import React, {
 } from 'react';
 import { Mods, classNames } from '@/shared/lib/classNames/classNames';
 import cls from './Input.module.scss';
-import { HStack } from '@/shared/UI/Stack';
+import { HStack, VStack } from '@/shared/UI/Stack';
 import { Text } from '@/shared/UI/Text';
 
 type HTMLInputProps = Omit<
     InputHTMLAttributes<HTMLInputElement>,
-    'value' | 'onChange' | 'readOnly' | 'size'
+    'value' | 'onChange' | 'readOnly' | 'size' | 'theme'
 >;
 
 type InputSize = 's' | 'm' | 'l';
+type ThemeInput = 'primary' | 'accent' | 'filled';
 
 interface InputProps extends HTMLInputProps {
     className?: string;
@@ -28,6 +29,7 @@ interface InputProps extends HTMLInputProps {
     addonLeft?: ReactElement;
     addonRight?: ReactElement;
     size?: InputSize;
+    theme?: ThemeInput;
 }
 
 export const Input = memo((props: InputProps) => {
@@ -43,6 +45,7 @@ export const Input = memo((props: InputProps) => {
         addonLeft,
         addonRight,
         size = 'm',
+        theme = 'primary',
         ...otherProps
     } = props;
     const ref = useRef<HTMLInputElement>(null);
@@ -79,6 +82,7 @@ export const Input = memo((props: InputProps) => {
             className={classNames(cls.InputWrapper, mods, [
                 className,
                 cls[size],
+                cls[theme],
             ])}
         >
             <div className={cls.addonLeft}>{addonLeft}</div>
@@ -100,10 +104,10 @@ export const Input = memo((props: InputProps) => {
 
     if (label) {
         return (
-            <HStack max gap="8">
-                <Text text={label} />
+            <VStack max gap="7">
+                <Text text={label} theme="placeholder" size="size_ph" />
                 {input}
-            </HStack>
+            </VStack>
         );
     }
 

@@ -23,8 +23,12 @@
 }
 
 .focused {
-    border: 1px solid var(--blue);
-
+    &.primary {
+        border: 1px solid var(--blue);
+    }
+    &.accent {
+        border-bottom: 2px solid var(--blue);
+    }
     .addonLeft svg,
     .addonRight svg {
         color: var(--blue);
@@ -39,9 +43,10 @@
     border: none;
     outline: none;
     width: 100%;
-    color: var(--text);
+    color: var(--dark);
     text-shadow: 0 0 0 var(--primary-color);
     background: none;
+    font: var(--font-txt);
 
     &::placeholder {
         color: var(--grey-dark);
@@ -61,4 +66,24 @@
 
 .l {
     height: 44px;
+}
+
+.accent {
+    padding: 0;
+    border: 0;
+    border-bottom: 2px solid #2b6bf329;
+    border-radius: 0;
+    width: 256px;
+    height: 26px;
+    .focused {
+        border-bottom: 2px solid var(--blue);
+    }
+}
+
+.filled {
+    border: 0;
+    border-radius: 4px;
+    background-color: var(--white);
+    width: 280px;
+    height: 40px;
 }

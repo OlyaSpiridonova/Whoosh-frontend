@@ -21,6 +21,8 @@
 }
 
 .clear {
+    display: flex;
+    justify-content: center;
     padding: 0;
     border: none;
     background: none;
@@ -30,6 +32,9 @@
         opacity: 0.7;
         text-decoration: dashed underline;
         text-underline-offset: 4px;
+    }
+    .addonLeft {
+        margin-right: 8px;
     }
 }
 
@@ -51,6 +56,7 @@
 .outline {
     border-radius: 34px;
     background: none;
+    padding: 0;
 
     &:hover {
         border: 1px solid var(--accent);
@@ -67,13 +73,45 @@
     &.success {
         border: 1px solid var(--save);
     }
+
+    &.blue {
+        color: var(--blue);
+        &:hover {
+            opacity: 0.7;
+        }
+    }
+    .addonRight {
+        margin-left: 8px;
+    }
 }
 
 .filled {
-    background: var(--light-bg);
-    border: none;
-    outline: none;
-    border-radius: 34px;
+    display: flex;
+    justify-content: center;
+    padding: 0;
+    background: var(--purple-dark);
+    border: 1px solid var(--light-grey);
+    &.active {
+        border: 2px solid var(--blue);
+        background: var(--white);
+    }
+    &:hover {
+        opacity: 0.7;
+    }
+}
+
+.filledBlue {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--blue);
+    color: var(--white);
+    border-radius: 32px;
+    width: 296px;
+    height: 48px;
+    &:hover {
+        background-color: var(--blue-dark);
+    }
 }
 
 .background {
@@ -105,6 +143,10 @@
 .square.size_xl {
     width: var(--font-line-xl);
     height: var(--font-line-xl);
+}
+
+.size_h5 {
+    font: var(--font-h5);
 }
 
 .size_m {

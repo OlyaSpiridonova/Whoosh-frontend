@@ -1,0 +1,29 @@
+.SendParcel {
+    background-color: var(--white);
+    border: 2px solid var(--purple);
+    border-radius: 8px;
+    padding: 39px 32px 24px 32px;
+    &__button {
+        &_first {
+            width: 100px;
+            height: 84px;
+            position: relative;
+            border-radius: 8px 0 0 8px;
+            &_text {
+                position: absolute;
+                bottom: 0;
+                left: 25%;
+            }
+        }
+        &_second {
+            width: 100px;
+            height: 84px;
+            border-radius: 0px;
+        }
+        &_third {
+            width: 100px;
+            height: 84px;
+            border-radius: 0 8px 8px 0;
+        }
+    }
+}

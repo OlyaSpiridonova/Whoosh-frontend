@@ -1,0 +1,15 @@
+export { WayComponent } from './icons/Way';
+export { SearchComponent } from '@/shared/assets/icons/Search';
+export { ArrowRight } from './icons/ArrowRight';
+export { CarComponent } from './icons/Car';
+export { CloseComponent } from './icons/Close';
+export { InfoComponent } from './icons/Info';
+export { LockComponent } from './icons/Lock';
+export { LogoComponent } from './icons/LogoComponent';
+export { onFootComponent } from './icons/OnFoot';
+export { PlayComponent } from './icons/Play';
+export { PointComponent } from './icons/Point';
+export { TruckComponent } from './icons/Truck';
+export { YelowLocationComponent } from './icons/YellowLocation';
+export { PinComponent } from './icons/PinComponent';
+export { SearchBase } from './icons/SearchBase';
