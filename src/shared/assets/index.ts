@@ -13,3 +13,7 @@ export { TruckComponent } from './icons/Truck';
 export { YelowLocationComponent } from './icons/YellowLocation';
 export { PinComponent } from './icons/PinComponent';
 export { SearchBase } from './icons/SearchBase';
+export { BagComponent } from './icons/Bag';
+export { MotoComponent } from './icons/Moto';
+export { RouteComponent } from './icons/Route';
+export { SupportComponent } from './icons/Support';

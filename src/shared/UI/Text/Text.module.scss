@@ -4,6 +4,7 @@
 
 .text {
     color: var(--grey-dark);
+    white-space: pre-wrap;
 }
 
 .primary {
@@ -87,6 +88,15 @@
     }
     .text {
         font: var(--font-txt2);
+    }
+}
+
+.size_h3 {
+    .title {
+        font: var(--font-h3);
+    }
+    .text {
+        font: var(--font-h3);
     }
 }
 

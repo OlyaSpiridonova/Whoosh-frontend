@@ -1,8 +1,10 @@
 .FirstSection {
     display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
     justify-content: space-between;
     padding: 36px 32px 32px 103px;
-    height: 784px;
+    min-height: 784px;
     background: var(--light-purple)
         url('../../../shared/assets/icons/Graphic.png') center bottom no-repeat;
     @media (max-width: 1360px) {

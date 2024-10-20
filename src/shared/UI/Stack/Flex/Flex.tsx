@@ -12,15 +12,19 @@ export type FlexGap =
     | '8'
     | '9'
     | '16'
+    | '17'
     | '20'
     | '22'
     | '24'
+    | '29'
     | '30'
     | '34'
     | '36'
     | '37'
+    | '39'
     | '40'
     | '48'
+    | '50'
     | '66'
     | '72'
     | '80';
@@ -49,6 +53,8 @@ const gapClasses: Record<FlexGap, string> = {
     8: cls.gap8,
     9: cls.gap9,
     16: cls.gap16,
+    17: cls.gap17,
+    29: cls.gap29,
     20: cls.gap20,
     22: cls.gap22,
     24: cls.gap24,
@@ -56,8 +62,10 @@ const gapClasses: Record<FlexGap, string> = {
     34: cls.gap34,
     36: cls.gap36,
     37: cls.gap37,
+    39: cls.gap39,
     40: cls.gap40,
     48: cls.gap48,
+    50: cls.gap50,
     66: cls.gap66,
     72: cls.gap72,
     80: cls.gap80,

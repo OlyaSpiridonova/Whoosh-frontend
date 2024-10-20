@@ -1,0 +1,9 @@
+.SecondSection {
+    padding: 98px 183px 96px 183px;
+    display: flex;
+    justify-content: center;
+    min-height: 648px;
+    &__text {
+        max-width: 754px;
+    }
+}

@@ -16,6 +16,7 @@ export type TextSize =
     | 'size_s'
     | 'size_m'
     | 'size_l'
+    | 'size_h3'
     | 'size_h4'
     | 'size_ph';
 
@@ -27,10 +28,9 @@ interface TextProps {
     align?: TextAlign;
     size?: TextSize;
     bold?: boolean;
-    'data-testid'?: string;
 }
 
-type HeaderTagType = 'h1' | 'h2' | 'h3' | 'h4' | 'h5' | 'h6';
+type HeaderTagType = 'h1' | 'h2' | 'h3' | 'h4' | 'h5' | 'h6' | 'span';
 
 const mapSizeToHeaderTag: Record<TextSize, HeaderTagType> = {
     size_s: 'h1',
@@ -39,6 +39,7 @@ const mapSizeToHeaderTag: Record<TextSize, HeaderTagType> = {
     size_h4: 'h4',
     size_xs: 'h5',
     size_ph: 'h6',
+    size_h3: 'span',
 };
 
 export const Text = memo((props: TextProps) => {
@@ -49,7 +50,6 @@ export const Text = memo((props: TextProps) => {
         theme = 'primary',
         align = 'left',
         size = 'size_m',
-        'data-testid': dataTestId = 'Text',
         bold,
     } = props;
 
