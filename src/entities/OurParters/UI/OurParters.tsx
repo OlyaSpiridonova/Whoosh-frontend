@@ -14,6 +14,7 @@ import { HStack, VStack } from '@/shared/UI/Stack';
 import { Text } from '@/shared/UI/Text';
 import { Button } from '@/shared/UI/Button';
 import { classNames } from '@/shared/lib/classNames/classNames';
+import { Divider } from '@/shared/UI/Divider/Divider';
 
 export const OurParters = memo(() => {
     const PartnersData = [
@@ -46,14 +47,7 @@ export const OurParters = memo(() => {
 
     return (
         <div className={cls.OurParters}>
-            <HStack className={cls.OurParters__divider} gap="34" align="center">
-                <span className={cls.OurParters__divider_line} />
-                <div>
-                    <Icon Svg={BoxComponent} />
-                </div>
-                <span className={cls.OurParters__divider_line} />
-            </HStack>
-
+            <Divider />
             <Button
                 className={classNames(cls.OurParters__btn)}
                 addonLeft={<Icon Svg={BagMinComponent} />}

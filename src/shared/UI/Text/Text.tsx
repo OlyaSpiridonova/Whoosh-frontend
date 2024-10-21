@@ -1,4 +1,4 @@
-import { memo } from 'react';
+import { memo, ReactNode } from 'react';
 import { classNames } from '@/shared/lib/classNames/classNames';
 import cls from './Text.module.scss';
 
@@ -28,6 +28,7 @@ interface TextProps {
     align?: TextAlign;
     size?: TextSize;
     bold?: boolean;
+    children?: ReactNode;
 }
 
 type HeaderTagType = 'h1' | 'h2' | 'h3' | 'h4' | 'h5' | 'h6' | 'span';
@@ -51,6 +52,7 @@ export const Text = memo((props: TextProps) => {
         align = 'left',
         size = 'size_m',
         bold,
+        children,
     } = props;
 
     const HeaderTag = mapSizeToHeaderTag[size];
@@ -66,7 +68,11 @@ export const Text = memo((props: TextProps) => {
             )}
         >
             {title && <HeaderTag className={cls.title}>{title}</HeaderTag>}
-            {text && <p className={cls.text}>{text}</p>}
+            {text && (
+                <p className={cls.text}>
+                    {text} {children}
+                </p>
+            )}
         </div>
     );
 });
