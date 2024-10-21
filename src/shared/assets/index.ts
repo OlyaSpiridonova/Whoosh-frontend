@@ -1,3 +1,4 @@
+export { AlvaComponent } from './icons/Alva';
 export { WayComponent } from './icons/Way';
 export { SearchComponent } from '@/shared/assets/icons/Search';
 export { ArrowRight } from './icons/ArrowRight';
@@ -17,3 +18,12 @@ export { BagComponent } from './icons/Bag';
 export { MotoComponent } from './icons/Moto';
 export { RouteComponent } from './icons/Route';
 export { SupportComponent } from './icons/Support';
+export { CalculatorComponent } from './icons/Calculator';
+export { BoxComponent } from './icons/Box';
+export { FagorComponent } from './icons/Fagor';
+export { GuitarCenterComponent } from './icons/GuitarCenter';
+export { PaperWorkComponent } from './icons/PaperWork';
+export { PaymentComponent } from './icons/Payment';
+export { RadioShackComponent } from './icons/RadioShack';
+export { TendoComponent } from './icons/Tendo';
+export { BagMinComponent } from './icons/BagMin';
