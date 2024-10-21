@@ -118,6 +118,20 @@
     }
 }
 
+.filledYellow {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--yellow);
+    color: var(--black);
+    border-radius: 32px;
+    width: 296px;
+    height: 48px;
+    &:hover {
+        color: var(--white);
+    }
+}
+
 .background {
     background: var(--bg-color);
     color: var(--primary-color);

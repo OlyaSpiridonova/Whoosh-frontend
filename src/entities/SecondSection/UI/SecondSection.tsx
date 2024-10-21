@@ -1,5 +1,5 @@
 import { memo } from 'react';
-import cls from './ SecondSection.module.scss';
+import cls from './SecondSection.module.scss';
 import { HStack, VStack } from '@/shared/UI/Stack';
 import { Text } from '@/shared/UI/Text';
 import {

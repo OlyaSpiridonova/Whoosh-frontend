@@ -1,0 +1,44 @@
+.WhatWeDo {
+    position: relative;
+    min-height: 640px;
+    &__bg {
+        padding: 74px 183px 72px 183px;
+        position: relative;
+        background-color: var(--light-purple);
+        border-radius: 290px 0 0 290px;
+        left: -4%;
+        min-height: 640px;
+        height: 100%;
+        width: 104%;
+    }
+    &__city {
+        position: absolute;
+        top: -72px;
+        right: 0;
+        z-index: 2;
+    }
+    &__text {
+        max-width: 754px;
+    }
+    &__card {
+        width: 300px;
+        height: 236px;
+        &_icon {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            box-shadow: 0px 8px 16px 0px #2b6bf329;
+        }
+        &_link {
+            font: var(--font-h4);
+            color: var(--blue);
+            &:hover {
+                opacity: 0.7;
+                text-decoration: none;
+            }
+        }
+    }
+}

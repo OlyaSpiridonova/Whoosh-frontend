@@ -13,7 +13,8 @@ export type ButtonTheme =
     | 'outline'
     | 'filled'
     | 'circle'
-    | 'filledBlue';
+    | 'filledBlue'
+    | 'filledYellow';
 export type ButtonColor = 'normal' | 'error' | 'success' | 'blue';
 export type ButtonSize = 'size_m' | 'size_l' | 'size_xl' | 'size_h5';
 
