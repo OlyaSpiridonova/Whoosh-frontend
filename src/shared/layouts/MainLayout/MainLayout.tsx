@@ -2,6 +2,7 @@ import { ReactElement, memo } from 'react';
 import { classNames } from '@/shared/lib/classNames/classNames';
 import cls from './MainLayout.module.scss';
 import { MobileView, BrowserView } from 'react-device-detect';
+import { Footer } from '@/shared/UI/Footer/Footer';
 
 interface MainLayoutProps {
     className?: string;
@@ -24,6 +25,7 @@ export const MainLayout = memo((props: MainLayoutProps) => {
                 <div>{sidebar}</div>
             </MobileView>
             <div className={cls.content}>{content}</div>
+            <Footer />
         </div>
     );
 });

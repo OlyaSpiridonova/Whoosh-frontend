@@ -34,6 +34,13 @@
     }
 }
 
+.heading {
+    .text {
+        color: var(--dark);
+        text-transform: uppercase;
+    }
+}
+
 .accent {
     .title {
         color: var(---grey-dark);
@@ -131,6 +138,10 @@
 
 .size_ph {
     font: var(--font-placeholder);
+}
+
+.size_hd {
+    font: var(--font-title);
 }
 
 .bold {

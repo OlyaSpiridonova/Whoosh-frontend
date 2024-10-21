@@ -7,7 +7,8 @@ export type TextTheme =
     | 'error'
     | 'accent'
     | 'normal'
-    | 'placeholder';
+    | 'placeholder'
+    | 'heading';
 
 export type TextAlign = 'right' | 'left' | 'center';
 
@@ -18,7 +19,8 @@ export type TextSize =
     | 'size_l'
     | 'size_h3'
     | 'size_h4'
-    | 'size_ph';
+    | 'size_ph'
+    | 'size_hd';
 
 interface TextProps {
     className?: string;
@@ -31,7 +33,7 @@ interface TextProps {
     children?: ReactNode;
 }
 
-type HeaderTagType = 'h1' | 'h2' | 'h3' | 'h4' | 'h5' | 'h6' | 'span';
+type HeaderTagType = 'h1' | 'h2' | 'h3' | 'h4' | 'h5' | 'h6' | 'span' | 'span';
 
 const mapSizeToHeaderTag: Record<TextSize, HeaderTagType> = {
     size_s: 'h1',
@@ -41,6 +43,7 @@ const mapSizeToHeaderTag: Record<TextSize, HeaderTagType> = {
     size_xs: 'h5',
     size_ph: 'h6',
     size_h3: 'span',
+    size_hd: 'span',
 };
 
 export const Text = memo((props: TextProps) => {

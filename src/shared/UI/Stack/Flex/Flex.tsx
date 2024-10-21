@@ -11,6 +11,7 @@ export type FlexGap =
     | '7'
     | '8'
     | '9'
+    | '12'
     | '16'
     | '17'
     | '20'
@@ -54,6 +55,7 @@ const gapClasses: Record<FlexGap, string> = {
     7: cls.gap7,
     8: cls.gap8,
     9: cls.gap9,
+    12: cls.gap12,
     16: cls.gap16,
     17: cls.gap17,
     29: cls.gap29,

@@ -1,3 +1,4 @@
+export { BlueLocation } from './icons/BlueLocation';
 export { AlvaComponent } from './icons/Alva';
 export { WayComponent } from './icons/Way';
 export { SearchComponent } from '@/shared/assets/icons/Search';
@@ -29,3 +30,10 @@ export { TendoComponent } from './icons/Tendo';
 export { BagMinComponent } from './icons/BagMin';
 export { Left } from './icons/Left';
 export { Right } from './icons/Right';
+export { FacebookComponent } from './icons/Facebook';
+export { InstaComponent } from './icons/Insta';
+export { PoliceComponent } from './icons/Police';
+export { PyroComponent } from './icons/Pyro';
+export { SymbolsComponent } from './icons/Symbols';
+export { VkComponent } from './icons/vk';
+export { YoutubeComponent } from './icons/youtube';
