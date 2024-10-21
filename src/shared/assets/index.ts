@@ -27,3 +27,5 @@ export { PaymentComponent } from './icons/Payment';
 export { RadioShackComponent } from './icons/RadioShack';
 export { TendoComponent } from './icons/Tendo';
 export { BagMinComponent } from './icons/BagMin';
+export { Left } from './icons/Left';
+export { Right } from './icons/Right';
