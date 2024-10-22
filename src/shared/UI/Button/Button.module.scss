@@ -113,6 +113,9 @@
     border-radius: 32px;
     width: 296px;
     height: 48px;
+    &.size_m {
+        width: 242px;
+    }
     &:hover {
         background-color: var(--blue-dark);
     }

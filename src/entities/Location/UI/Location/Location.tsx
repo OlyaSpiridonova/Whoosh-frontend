@@ -1,5 +1,4 @@
-import { memo, useEffect, useState } from 'react';
-import { useSelector } from 'react-redux';
+import { memo, useCallback, useEffect, useState } from 'react';
 import { useAppDispatch } from '@/shared/lib/hooks/useAppDispatch/useAppDispatch';
 import {
     DynamicModuleLoader,
@@ -8,15 +7,14 @@ import {
 import { Icon } from '@/shared/UI/Icon';
 import { PinComponent } from '@/shared/assets';
 import { classNames } from '@/shared/lib/classNames/classNames';
-import {
-    getLocationData,
-    getLocationError,
-    getLocationIsLoading,
-} from '../../model/selectors/location';
 import { fetchLocation } from '../../model/services/fetchLocations/fetchLocations';
 import { locationReducer } from '../../model/slice/locationSlice';
 
 import cls from './Location.module.scss';
+import { Popup } from '@/shared/UI/Popup/Popup';
+import { useSelector } from 'react-redux';
+import { getLocationData } from '../../model/selectors/location';
+import { VStack } from '@/shared/UI/Stack';
 
 const reducers: ReducersList = {
     locations: locationReducer,
@@ -25,7 +23,18 @@ const reducers: ReducersList = {
 export const LocationComponent = memo(() => {
     const dispatch = useAppDispatch();
 
+    const locations = useSelector(getLocationData);
     const [location, setLocation] = useState('');
+    const [isVisiblePopup, setIsVisiblePopup] = useState(false);
+
+    const onVisiblePopup = useCallback(() => {
+        setIsVisiblePopup((prev) => !prev);
+    }, []);
+
+    const onChooseLocation = (location: string) => {
+        setLocation(location);
+        setIsVisiblePopup(false);
+    };
 
     useEffect(() => {
         const fetchData = async () => {
@@ -39,10 +48,23 @@ export const LocationComponent = memo(() => {
 
     return (
         <DynamicModuleLoader reducers={reducers}>
-            <div className={classNames(cls.Location)}>
-                <Icon Svg={PinComponent} />
-                <span className={cls.Location__name}>{location}</span>
-            </div>
+            <VStack gap="16">
+                <div
+                    className={classNames(cls.Location)}
+                    onClick={onVisiblePopup}
+                >
+                    <Icon Svg={PinComponent} />
+                    <span className={cls.Location__name}>{location}</span>
+                </div>
+                {isVisiblePopup && (
+                    <Popup
+                        list={locations?.map((location) => location.name) || []}
+                        onChoose={(listItem: string) => () =>
+                            onChooseLocation(listItem)
+                        }
+                    />
+                )}
+            </VStack>
         </DynamicModuleLoader>
     );
 });

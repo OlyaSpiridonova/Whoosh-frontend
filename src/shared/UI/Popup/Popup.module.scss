@@ -1,0 +1,23 @@
+.Popup {
+    position: absolute;
+    background: var(--white);
+    z-index: 10;
+    border-radius: 8px;
+    outline: 1px solid var(--light-grey);
+    top: 65px;
+    width: 142px;
+    height: 216px;
+    overflow-y: scroll;
+    &__item {
+        display: flex;
+        align-items: center;
+        width: 100%;
+        padding: 8px 0 8px 15px;
+        font: var(--font-txt);
+        color: var(--grey-dark);
+        &:hover {
+            cursor: pointer;
+            background: var(--purple);
+        }
+    }
+}

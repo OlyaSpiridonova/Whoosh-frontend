@@ -15,6 +15,34 @@
         {
             "id": 4,
             "name": "San Francisco"
+        },
+        {
+            "id": 5,
+            "name": "Chicago"
+        },
+        {
+            "id": 6,
+            "name": "Boston"
+        },
+        {
+            "id": 7,
+            "name": "Houston"
+        },
+        {
+            "id": 8,
+            "name": "Philadelphia"
+        },
+        {
+            "id": 9,
+            "name": "Dallas"
+        },
+        {
+            "id": 10,
+            "name": "San Diego"
+        },
+        {
+            "id": 11,
+            "name": "Seattle"
         }
     ]
 }

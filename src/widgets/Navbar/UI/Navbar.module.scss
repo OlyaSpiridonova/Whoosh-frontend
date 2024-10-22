@@ -1,8 +1,30 @@
 .Navbar {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    height: var(--navbar-height);
-    background-color: var(--light-purple);
-    padding: 0 32px;
+    &__desktop {
+        display: none;
+        @media (min-width: 968px) {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            height: var(--navbar-height);
+            background-color: var(--light-purple);
+            padding: 0 32px;
+        }
+    }
+
+    &__mobile {
+        display: none;
+        @media (max-width: 967px) {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            height: var(--navbar-height);
+            background-color: var(--light-purple);
+            padding: 0 16px;
+            width: 100%;
+        }
+        &_btn {
+            position: relative;
+            z-index: 11;
+        }
+    }
 }

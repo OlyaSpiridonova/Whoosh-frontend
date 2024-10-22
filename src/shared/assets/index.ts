@@ -37,3 +37,6 @@ export { PyroComponent } from './icons/Pyro';
 export { SymbolsComponent } from './icons/Symbols';
 export { VkComponent } from './icons/vk';
 export { YoutubeComponent } from './icons/youtube';
+export { ProfileComponent } from './icons/Profile';
+export { MenuComponent } from './icons/Menu';
+export { MenuCloseComponent } from './icons/MenuClose';
