@@ -1,0 +1,26 @@
+.Tooltip {
+    position: relative;
+    cursor: pointer;
+    &__icon {
+        svg {
+            color: var(--border);
+        }
+        &.active {
+            svg {
+                color: var(--dark);
+            }
+        }
+    }
+    &__text {
+        position: absolute;
+        top: 45px;
+        right: 0;
+        width: 252px;
+        padding: 8px 16px;
+        border: 1px solid var(--light-grey);
+        font: var(--font-txt2);
+        z-index: 2;
+        background: var(--white);
+        box-shadow: 0px 16px 16px 0px #4963b029;
+    }
+}

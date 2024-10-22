@@ -12,6 +12,7 @@ import { Icon } from '@/shared/UI/Icon';
 import { Button } from '@/shared/UI/Button';
 import { FormSendParcel } from '../FormSendParcel/FormSendParcel';
 import cls from './SendParcel.module.scss';
+import { Tooltip } from '@/shared/UI/Tooltip/Tooltip';
 
 export const SendParcel = memo(() => {
     const [isActive, setIsActive] = useState([false, false, false]);
@@ -30,7 +31,10 @@ export const SendParcel = memo(() => {
                 <VStack gap="20">
                     <HStack gap="16">
                         <Text text="Send a Parcel" size="size_h4" />
-                        <Icon Svg={InfoComponent} />
+                        <Tooltip
+                            text="A commission is a piece of work that someone is asked to do and is paid for."
+                            icon={InfoComponent}
+                        />
                     </HStack>
                     <HStack>
                         <Button

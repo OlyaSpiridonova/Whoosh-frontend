@@ -7,7 +7,7 @@ export const InfoComponent = () => {
             fill="none"
             xmlns="http://www.w3.org/2000/svg"
         >
-            <circle cx="12" cy="12" r="12" fill="#DDE7FD" />
+            <circle cx="12" cy="12" r="12" fill="currentColor" />
             <path
                 d="M11 11C11 10.4477 11.4477 10 12 10C12.5523 10 13 10.4477 13 11V17C13 17.5523 12.5523 18 12 18C11.4477 18 11 17.5523 11 17V11Z"
                 fill="white"
