@@ -1,6 +1,16 @@
 .Footer {
+    border-top: 1px solid var(--light-grey);
     padding: 84px 103px 56px 103px;
     background-color: var(--light-purple);
+    @media (max-width: 968px) {
+        padding: 44px 16px 112px 16px;
+    }
+    &__content {
+        @media (max-width: 968px) {
+            row-gap: 32px;
+            column-gap: 16px;
+        }
+    }
     &__about {
         width: 300px;
         &_title {
@@ -8,6 +18,9 @@
         }
         &_text {
             width: 240px;
+        }
+        @media (max-width: 968px) {
+            width: 328px;
         }
     }
     &__menu,
@@ -19,9 +32,15 @@
             background: var(--light-grey);
             height: 2px;
         }
+        @media (max-width: 968px) {
+            width: 156px;
+        }
     }
     &__contact {
         width: 232px;
+        @media (max-width: 968px) {
+            width: 328px;
+        }
         &_hr {
             margin-top: 9px;
             margin-bottom: 15px;
@@ -51,6 +70,11 @@
                     opacity: 0.7;
                 }
             }
+            @media (max-width: 968px) {
+                padding-top: 26px;
+                justify-content: space-around;
+                width: 328px;
+            }
         }
     }
     &__divider {
@@ -69,6 +93,33 @@
     }
 
     &__policy {
+        position: relative;
         padding: 0 84px 0 64px;
+        height: 64px;
+        @media (max-width: 968px) {
+            flex-direction: column-reverse;
+        }
+    }
+
+    &__icon {
+        position: absolute;
+        top: 0;
+        right: 50%;
+        transform: translateX(50%);
+        svg {
+            color: var(--blue);
+        }
+        @media (max-width: 968px) {
+            top: 125px;
+            svg {
+                color: var(--red);
+            }
+        }
+    }
+
+    &__bottom {
+        @media (max-width: 968px) {
+            flex-direction: column-reverse;
+        }
     }
 }

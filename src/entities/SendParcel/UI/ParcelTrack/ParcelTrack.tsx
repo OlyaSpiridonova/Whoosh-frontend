@@ -9,12 +9,13 @@ import { VStack } from '@/shared/UI/Stack';
 export const ParcelTrack = memo(() => {
     return (
         <div className={cls.ParcelTrack}>
-            <VStack gap="9">
+            <VStack gap="9" max>
                 <Text size="size_h4" text="Track a package" />
                 <Input
                     placeholder="Enter code"
                     addonRight={<Icon Svg={SearchBase} />}
                     theme="filled"
+                    size="l"
                 />
             </VStack>
         </div>

@@ -69,8 +69,16 @@ export const WhatWeDo = memo(() => {
                                     key={card.id}
                                     className={cls.WhatWeDo__card}
                                 >
-                                    <VStack gap="21">
-                                        <VStack gap="31">
+                                    <VStack
+                                        gap="21"
+                                        className={cls.WhatWeDo__card_content}
+                                    >
+                                        <VStack
+                                            gap="31"
+                                            className={
+                                                cls.WhatWeDo__card_header
+                                            }
+                                        >
                                             <div
                                                 className={
                                                     cls.WhatWeDo__card_icon
@@ -97,6 +105,7 @@ export const WhatWeDo = memo(() => {
                                             </HStack>
                                         </VStack>
                                         <Text
+                                            className={cls.WhatWeDo__card_descr}
                                             text={card.description}
                                             theme="normal"
                                         />

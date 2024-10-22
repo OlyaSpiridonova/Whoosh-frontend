@@ -6,6 +6,9 @@
         position: relative;
         padding: 86px 103px 84px 103px;
         overflow: hidden;
+        @media (max-width: 968px) {
+            padding: 54px 16px 48px 16px;
+        }
     }
 
     &__btn {

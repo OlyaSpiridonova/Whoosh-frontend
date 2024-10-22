@@ -15,6 +15,12 @@ import { Text } from '@/shared/UI/Text';
 import { Button } from '@/shared/UI/Button';
 import { classNames } from '@/shared/lib/classNames/classNames';
 import { Divider } from '@/shared/UI/Divider/Divider';
+import { Navigation, Pagination, Autoplay } from 'swiper/modules';
+import { Swiper, SwiperSlide } from 'swiper/react';
+import 'swiper/css';
+import 'swiper/css/navigation';
+import 'swiper/css/pagination';
+import 'swiper/css/autoplay';
 
 export const OurParters = memo(() => {
     const PartnersData = [
@@ -43,6 +49,31 @@ export const OurParters = memo(() => {
             name: 'Guitar Center',
             icon: GuitarCenterComponent,
         },
+        {
+            id: 6,
+            name: 'Alva',
+            icon: AlvaComponent,
+        },
+        {
+            id: 7,
+            name: 'Tendo',
+            icon: TendoComponent,
+        },
+        {
+            id: 8,
+            name: 'Fagor',
+            icon: FagorComponent,
+        },
+        {
+            id: 9,
+            name: 'RadioShack',
+            icon: RadioShackComponent,
+        },
+        {
+            id: 10,
+            name: 'Guitar Center',
+            icon: GuitarCenterComponent,
+        },
     ];
 
     return (
@@ -56,27 +87,36 @@ export const OurParters = memo(() => {
                 Let's collaborate
             </Button>
 
-            <VStack gap="80" align="center" justify="center">
+            <VStack
+                className={classNames(cls.OurParters__content)}
+                gap="80"
+                align="center"
+                justify="center"
+            >
                 <HStack className={classNames(cls.OurParters__text)}>
                     <Text text="Our Partners" size="size_l" />
                 </HStack>
 
-                <HStack
-                    className={classNames(cls.OurParters__logo)}
-                    justify="between"
-                    align="center"
-                    gap="16"
-                    max
-                    wrap="wrap"
+                <Swiper
+                    modules={[Navigation, Pagination, Autoplay]}
+                    spaceBetween={20}
+                    slidesPerView={5}
+                    centeredSlides={true}
+                    navigation
+                    style={{ maxWidth: '1100px' }}
+                    autoplay={{ delay: 2500, disableOnInteraction: false }}
+                    loop={true}
                 >
                     {PartnersData.map((partner) => (
-                        <Icon
-                            key={partner.id}
-                            name={partner.name}
-                            Svg={partner.icon}
-                        />
+                        <SwiperSlide key={partner.id}>
+                            <Icon
+                                key={partner.id}
+                                name={partner.name}
+                                Svg={partner.icon}
+                            />
+                        </SwiperSlide>
                     ))}
-                </HStack>
+                </Swiper>
             </VStack>
         </div>
     );

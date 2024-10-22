@@ -62,6 +62,9 @@ export const SendParcel = memo(() => {
                             <VStack>
                                 <Icon Svg={CarComponent} />
                                 <Text
+                                    className={
+                                        cls.SendParcel__button_second_text
+                                    }
                                     text="up to 130lb"
                                     size="size_xs"
                                     theme={isActive[1] ? 'primary' : 'normal'}
@@ -77,6 +80,9 @@ export const SendParcel = memo(() => {
                             <VStack>
                                 <Icon Svg={TruckComponent} />
                                 <Text
+                                    className={
+                                        cls.SendParcel__button_third_text
+                                    }
                                     text="over 130lb"
                                     size="size_xs"
                                     theme={isActive[2] ? 'primary' : 'normal'}

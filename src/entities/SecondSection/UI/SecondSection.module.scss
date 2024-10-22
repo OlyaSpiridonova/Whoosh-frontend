@@ -3,6 +3,9 @@
     display: flex;
     justify-content: center;
     min-height: 648px;
+    @media (max-width: 968px) {
+        padding: 54px 16px 48px 16px;
+    }
     &__text {
         max-width: 754px;
     }

@@ -3,7 +3,7 @@ import { Swiper, SwiperRef, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
-import { Navigation, Pagination } from 'swiper/modules';
+import { Autoplay, Navigation, Pagination } from 'swiper/modules';
 import { Left, Right } from '@/shared/assets';
 import cls from './Slider.module.scss';
 import { Icon } from '../Icon';
@@ -41,10 +41,14 @@ export const Slider: React.FC<SliderProps> = ({ icons }) => {
 
             <Swiper
                 ref={sliderRef}
-                modules={[Navigation, Pagination]}
+                modules={[Navigation, Pagination, Autoplay]}
                 slidesPerView={6}
+                spaceBetween={16}
                 navigation
-                style={{ maxWidth: '1024px', margin: '54px' }}
+                centeredSlides={true}
+                style={{ maxWidth: '1024px' }}
+                autoplay={{ delay: 2500, disableOnInteraction: false }}
+                loop={true}
             >
                 {icons.map((icon, index) => (
                     <SwiperSlide key={index} style={{ minWidth: '188px' }}>

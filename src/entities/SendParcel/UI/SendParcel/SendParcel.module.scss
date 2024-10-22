@@ -3,6 +3,9 @@
     border: 2px solid var(--purple);
     border-radius: 8px;
     padding: 39px 32px 24px 32px;
+    @media (max-width: 968px) {
+        padding: 39px 16px 24px 16px;
+    }
     &__button {
         &_first {
             width: 100px;
@@ -13,17 +16,43 @@
                 position: absolute;
                 bottom: 0;
                 left: 25%;
+                @media (max-width: 968px) {
+                    display: none;
+                }
+            }
+            @media (max-width: 968px) {
+                height: 56px;
+                svg {
+                    position: relative;
+                    top: 13px;
+                }
             }
         }
         &_second {
             width: 96px;
             height: 84px;
             border-radius: 0px;
+            @media (max-width: 968px) {
+                height: 56px;
+            }
+            &_text {
+                @media (max-width: 968px) {
+                    display: none;
+                }
+            }
         }
         &_third {
             width: 100px;
             height: 84px;
             border-radius: 0 8px 8px 0;
+            @media (max-width: 968px) {
+                height: 56px;
+            }
+            &_text {
+                @media (max-width: 968px) {
+                    display: none;
+                }
+            }
         }
     }
 }

@@ -55,7 +55,13 @@ export const Footer = () => {
 
     return (
         <VStack className={cls.Footer} gap="24" justify="center" align="center">
-            <HStack gap="66" justify="center" align="start">
+            <HStack
+                className={cls.Footer__content}
+                gap="66"
+                justify="center"
+                align="start"
+                wrap="wrap"
+            >
                 <div className={cls.Footer__about}>
                     <Text
                         className={cls.Footer__about_title}
@@ -135,24 +141,28 @@ export const Footer = () => {
                 </div>
             </HStack>
 
-            <HStack className={cls.Footer__divider} gap="34" align="center">
-                <span className={cls.Footer__divider_line} />
-                <span className={cls.Footer__divider_name}>Made by</span>
-                <span className={cls.Footer__divider_line} />
-            </HStack>
-
-            <HStack justify="between" max className={cls.Footer__policy}>
-                <Text
-                    text="© 2022. All rights reserved."
-                    size="size_s"
-                    theme="normal"
-                />
-                <Icon Svg={PyroComponent} />
-                <HStack gap="12">
-                    <Icon Svg={PoliceComponent} />
-                    <Text text="Privacy policy" />
+            <VStack className={cls.Footer__bottom} gap="24" max>
+                <HStack className={cls.Footer__divider} gap="34" align="center">
+                    <span className={cls.Footer__divider_line} />
+                    <span className={cls.Footer__divider_name}>Made by</span>
+                    <span className={cls.Footer__divider_line} />
                 </HStack>
-            </HStack>
+
+                <HStack justify="between" max className={cls.Footer__policy}>
+                    <Text
+                        text="© 2022. All rights reserved."
+                        size="size_s"
+                        theme="normal"
+                    />
+                    <div className={cls.Footer__icon}>
+                        <Icon Svg={PyroComponent} />
+                    </div>
+                    <HStack gap="12">
+                        <Icon Svg={PoliceComponent} />
+                        <Text text="Privacy policy" />
+                    </HStack>
+                </HStack>
+            </VStack>
         </VStack>
     );
 };

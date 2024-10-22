@@ -58,6 +58,10 @@
     --font-placeholder: 700 12px/16px 'Intro-Bold', sans-serif;
     --font-title: 700 14px/16px 'Intro-Bold', sans-serif;
 
+    @media (max-width: 968px) {
+        --font-h1: 700 24px/32px 'Intro-Bold', sans-serif;
+    }
+
     // Цвета
     --yellow: #ffdd2d;
     --blue: #2b6bf3;

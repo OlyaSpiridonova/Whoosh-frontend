@@ -26,43 +26,43 @@ export const PyroComponent = () => {
                 />
                 <path
                     d="M37.5234 18.5269C37.5234 18.5269 25.5177 36.052 17.825 47.2813"
-                    stroke="#2B6BF3"
+                    stroke="currentColor"
                     strokeWidth="2"
                     strokeLinejoin="round"
                 />
                 <path
                     d="M27.1232 18.9345C31.0171 16.2819 50.3673 10.0137 51.9726 12.405C54.6007 16.32 34.7728 30.793 28.8554 31.6292"
-                    stroke="#2B6BF3"
+                    stroke="currentColor"
                     strokeWidth="2"
                     strokeLinejoin="round"
                 />
                 <path
                     d="M41.6212 28.1681C39.2487 29.9218 35.9853 34.4425 36.872 35.5489C37.3534 36.1495 42.437 32.5921 43.9111 31.232"
-                    stroke="#2B6BF3"
+                    stroke="currentColor"
                     strokeWidth="2"
                     strokeLinejoin="round"
                 />
                 <path
                     d="M50.0004 25.702C43.6195 30.2085 36.5489 39.9007 36.5489 42.0942C39.5718 40.8189 63.4478 34.3914 81.9004 36.2754"
-                    stroke="#2B6BF3"
+                    stroke="currentColor"
                     strokeWidth="2"
                     strokeLinejoin="round"
                 />
                 <path
                     d="M54.4824 25.6172C53.5639 26.6756 47.5187 33.9145 46.2847 36.1256"
-                    stroke="#2B6BF3"
+                    stroke="currentColor"
                     strokeWidth="2"
                     strokeLinejoin="round"
                 />
                 <path
                     d="M51.2936 28.4765C52.9639 26.716 58.2687 24.0507 59.1035 25.5178C59.652 27.2692 51.9257 31.3704 50.6385 30.5657C52.1232 31.9384 56.5613 33.9038 58.4264 34.6466"
-                    stroke="#2B6BF3"
+                    stroke="currentColor"
                     strokeWidth="2"
                     strokeLinejoin="round"
                 />
                 <path
                     d="M68.8852 24.8683C65.9161 23.1703 59.6111 31.4784 60.937 33.5748C61.3756 34.2682 71.5941 27.8104 68.8852 24.8683Z"
-                    stroke="#2B6BF3"
+                    stroke="currentColor"
                     strokeWidth="2"
                     strokeLinejoin="round"
                 />
