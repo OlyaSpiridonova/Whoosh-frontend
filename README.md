@@ -61,7 +61,6 @@ npm run start:dev или npm run start:dev:vite - запуск сервера + 
 -   [WhatWeDo](/src/entities/WhatWeDo)
 -   [Location](/src/entities/Location)
 -   [Payment](/src/entities/Payment)
--   [Search](/src/entities/Search)
 -   [TextSection](/src/entities/TextSection)
 -   [SendParcel](/src/entities/SendParcel)
 

@@ -9,7 +9,6 @@ import {
     PaperWorkComponent,
     PaymentComponent,
 } from '@/shared/assets';
-import { link } from 'fs';
 import { CardPayment } from '../model/types';
 import { Icon } from '@/shared/UI/Icon';
 import { Link } from 'react-router-dom';

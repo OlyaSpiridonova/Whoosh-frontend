@@ -8,7 +8,7 @@ import React, {
 } from 'react';
 import { Mods, classNames } from '@/shared/lib/classNames/classNames';
 import cls from './Input.module.scss';
-import { HStack, VStack } from '@/shared/UI/Stack';
+import { VStack } from '@/shared/UI/Stack';
 import { Text } from '@/shared/UI/Text';
 
 type HTMLInputProps = Omit<

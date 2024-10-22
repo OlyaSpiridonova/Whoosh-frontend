@@ -2,7 +2,6 @@ import { memo } from 'react';
 import cls from './OurParters.module.scss';
 import { Icon } from '@/shared/UI/Icon';
 import {
-    BoxComponent,
     BagMinComponent,
     AlvaComponent,
     TendoComponent,

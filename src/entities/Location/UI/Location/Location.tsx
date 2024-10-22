@@ -1,5 +1,4 @@
 import { memo, useCallback, useEffect, useState } from 'react';
-import { useAppDispatch } from '@/shared/lib/hooks/useAppDispatch/useAppDispatch';
 import {
     DynamicModuleLoader,
     ReducersList,
@@ -7,13 +6,10 @@ import {
 import { Icon } from '@/shared/UI/Icon';
 import { PinComponent } from '@/shared/assets';
 import { classNames } from '@/shared/lib/classNames/classNames';
-import { fetchLocation } from '../../model/services/fetchLocations/fetchLocations';
 import { locationReducer } from '../../model/slice/locationSlice';
 
 import cls from './Location.module.scss';
 import { Popup } from '@/shared/UI/Popup/Popup';
-import { useSelector } from 'react-redux';
-import { getLocationData } from '../../model/selectors/location';
 import { VStack } from '@/shared/UI/Stack';
 
 const reducers: ReducersList = {
@@ -21,10 +17,58 @@ const reducers: ReducersList = {
 };
 
 export const LocationComponent = memo(() => {
-    const dispatch = useAppDispatch();
+    // в случае получения данных с сервера
 
-    const locations = useSelector(getLocationData);
-    const [location, setLocation] = useState('');
+    // const dispatch = useAppDispatch();
+    // const locations = useSelector(getLocationData);
+
+    const locationsData = [
+        {
+            id: 1,
+            name: 'NY, Manhattan',
+        },
+        {
+            id: 2,
+            name: 'New York',
+        },
+        {
+            id: 3,
+            name: 'Los Angeles',
+        },
+        {
+            id: 4,
+            name: 'San Francisco',
+        },
+        {
+            id: 5,
+            name: 'Chicago',
+        },
+        {
+            id: 6,
+            name: 'Boston',
+        },
+        {
+            id: 7,
+            name: 'Houston',
+        },
+        {
+            id: 8,
+            name: 'Philadelphia',
+        },
+        {
+            id: 9,
+            name: 'Dallas',
+        },
+        {
+            id: 10,
+            name: 'San Diego',
+        },
+        {
+            id: 11,
+            name: 'Seattle',
+        },
+    ];
+    const [location, setLocation] = useState(locationsData[0].name);
     const [isVisiblePopup, setIsVisiblePopup] = useState(false);
 
     const onVisiblePopup = useCallback(() => {
@@ -32,19 +76,21 @@ export const LocationComponent = memo(() => {
     }, []);
 
     const onChooseLocation = (location: string) => {
-        setLocation(location);
+        // setLocation(location);
         setIsVisiblePopup(false);
     };
 
-    useEffect(() => {
-        const fetchData = async () => {
-            const res = await dispatch(fetchLocation());
-            if (res.payload?.length) {
-                setLocation(res.payload[0]?.name);
-            }
-        };
-        fetchData();
-    }, [dispatch]);
+    // в случае получения данных с сервера
+
+    // useEffect(() => {
+    //     const fetchData = async () => {
+    //         const res = await dispatch(fetchLocation());
+    //         if (res.payload?.length) {
+    //             setLocation(res.payload[0]?.name);
+    //         }
+    //     };
+    //     fetchData();
+    // }, [dispatch]);
 
     return (
         <DynamicModuleLoader reducers={reducers}>
@@ -58,7 +104,10 @@ export const LocationComponent = memo(() => {
                 </div>
                 {isVisiblePopup && (
                     <Popup
-                        list={locations?.map((location) => location.name) || []}
+                        list={
+                            locationsData?.map((location) => location.name) ||
+                            []
+                        }
                         onChoose={(listItem: string) => () =>
                             onChooseLocation(listItem)
                         }
