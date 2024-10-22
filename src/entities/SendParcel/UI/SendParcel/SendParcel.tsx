@@ -28,7 +28,7 @@ export const SendParcel = memo(() => {
     return (
         <div className={classNames(cls.SendParcel)}>
             <VStack gap="34">
-                <VStack gap="20">
+                <VStack gap="16">
                     <HStack gap="16">
                         <Text text="Send a Parcel" size="size_h4" />
                         <Tooltip

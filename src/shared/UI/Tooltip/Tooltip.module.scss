@@ -1,6 +1,7 @@
 .Tooltip {
     position: relative;
     cursor: pointer;
+    height: 100%;
     &__icon {
         svg {
             color: var(--border);
@@ -22,5 +23,8 @@
         z-index: 2;
         background: var(--white);
         box-shadow: 0px 16px 16px 0px #4963b029;
+        @media (max-width: 968px) {
+            width: 200px;
+        }
     }
 }

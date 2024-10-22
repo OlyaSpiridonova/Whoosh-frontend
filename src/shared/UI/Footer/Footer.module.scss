@@ -12,15 +12,21 @@
         }
     }
     &__about {
-        width: 300px;
+        position: relative;
+        width: 240px;
         &_title {
             padding-bottom: 32px;
+        }
+        &_icon {
+            position: absolute;
+            top: 45px;
+            left: -60px;
         }
         &_text {
             width: 240px;
         }
         @media (max-width: 968px) {
-            width: 328px;
+            width: 218px;
         }
     }
     &__menu,
@@ -43,7 +49,7 @@
         }
         &_hr {
             margin-top: 9px;
-            margin-bottom: 15px;
+            margin-bottom: 25px;
             background: var(--light-grey);
             height: 2px;
         }

@@ -1,3 +1,7 @@
+## Демо-версия проекта
+
+-   [Смотреть](https://whoosh-frontend.netlify.app)
+
 ## Запуск проекта
 
 ```
@@ -10,7 +14,7 @@ npm run start:dev или npm run start:dev:vite - запуск сервера + 
 ## Скрипты
 
 -   `npm run start` - Запуск frontend проекта
--   `npm run build:prod` - Сборка в prod режиме
+-   `npm run start:dev` - Запуск frontend проекта c сервером
 -   `npm run build` - Сборка в dev режиме (не минимизирован)
 -   `npm run lint:ts` - Проверка ts файлов линтером
 -   `npm run lint:ts:fix` - Исправление ts файлов линтером
@@ -50,5 +54,15 @@ npm run start:dev или npm run start:dev:vite - запуск сервера + 
 ---
 
 ## Сущности (entities)
+
+-   [FirstSection](/src/entities/FirstSection)
+-   [SecondSection](/src/entities/SecondSection)
+-   [OurPartners](/src/entities/OurPartners)
+-   [WhatWeDo](/src/entities/WhatWeDo)
+-   [Location](/src/entities/Location)
+-   [Payment](/src/entities/Payment)
+-   [Search](/src/entities/Search)
+-   [TextSection](/src/entities/TextSection)
+-   [SendParcel](/src/entities/SendParcel)
 
 ## Фичи (features)

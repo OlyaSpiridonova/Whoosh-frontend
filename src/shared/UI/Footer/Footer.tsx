@@ -69,20 +69,20 @@ export const Footer = () => {
                         theme="heading"
                         size="size_hd"
                     />
-                    <HStack gap="16">
+                    <div className={cls.Footer__about_icon}>
                         <Icon Svg={SymbolsComponent} width={40} height={40} />
-                        <Text
-                            className={cls.Footer__about_text}
-                            text="Express delivery of documents and parcels for organizations, express delivery of correspondence, purchases and other goods"
-                            size="size_s"
-                            theme="normal"
-                        />
-                    </HStack>
+                    </div>
+                    <Text
+                        className={cls.Footer__about_text}
+                        text="Express delivery of documents and parcels for organizations, express delivery of correspondence, purchases and other goods"
+                        size="size_s"
+                        theme="normal"
+                    />
                 </div>
                 <div className={cls.Footer__menu}>
                     <Text text="Menu" theme="heading" size="size_hd" />
                     <hr className={cls.Footer__menu_hr} />
-                    <VStack gap="16">
+                    <VStack gap="7">
                         {menuData.map((item) => (
                             <Text
                                 key={item}
@@ -96,7 +96,7 @@ export const Footer = () => {
                 <div className={cls.Footer__services}>
                     <Text text="Services" theme="heading" size="size_hd" />
                     <hr className={cls.Footer__services_hr} />
-                    <VStack gap="16">
+                    <VStack gap="7">
                         {servicesData.map((item) => (
                             <Text
                                 key={item}
